@@ -116,12 +116,12 @@ The function returns a list of `SpatRaster` objects. The first one, i.e. Fold 1,
 plot(rasters[[1]])
 ```
 
-It can be plotted with `tmap` for example:
-```{r message=FALSE, warning=FALSE, out.width="100%"}
-# Plot it!
-tmap_mode("view")
+<!-- It can be plotted with `tmap` for example: -->
+<!-- ```{r message=FALSE, warning=FALSE, out.width="100%"} -->
+<!-- # Plot it! -->
+<!-- tmap_mode("view") -->
 
-tm_basemap("Stamen.Terrain") +
-  tm_shape(rasters[[1]]$beta) +
-  tm_raster()
-```
+<!-- tm_basemap("Stamen.Terrain") + -->
+<!--   tm_shape(rasters[[1]]$beta) + -->
+<!--   tm_raster() -->
+<!-- ``` -->

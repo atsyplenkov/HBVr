@@ -1,11 +1,25 @@
 Package: HBVr
 Type: Package
-Title: What the Package Does (Title Case)
-Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
-License: What license is it under?
+Title: Get HBV Parameters
+Version: 0.0.1
+Authors@R: 
+    c(person("Anatoly", "Tsyplenkov", 
+    email = "atsyplenkov@gmail.com",
+    role = c("cre", "aut"),
+    comment = c(ORCID = "0000-0003-4144-8402")))
+Maintainer: Anatoly Tsyplenkov <atsyplenkov@gmail.com>
+Description: This package offers a user-friendly approach to access the regionalized HBV parameters maps.
+License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
+RoxygenNote: 7.2.1
+Depends: R (>= 3.5.0), terra (>= 1.5)
+Suggests: 
+    knitr,
+    pbapply,
+    rmarkdown,
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
+VignetteBuilder: knitr
+URL: https://github.com/atsyplenkov/HBVr
+BugReports: https://github.com/atsyplenkov/HBVr/issues

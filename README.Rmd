@@ -1,0 +1,72 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# HBVr <img src='man/figures/logo.svg' align="right" height="139" />
+
+<!-- badges: start -->
+[![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
+<!-- badges: end -->
+
+The goal of HBVr is to ease the accessebility of HBV Global Parameter maps created by Beck et al. ([2020](http://www.gloh2o.org/hbv/)). Therefore this one-function package allows to download any of the cross-validation folds for your particular area of interest (AOI).
+
+## Installation
+
+You can install the development version of HBVr from [GitHub](https://github.com/) with:
+
+``` r
+# install.packages("devtools")
+devtools::install_github("atsyplenkov/HBVr")
+```
+
+## Disclaimer
+While `HBVr` does not redistribute the data or provide it in any way, we encourage users to cite original papers when using this package:
+
+> Beck HE, Pan M, Lin P, Seibert J, van Dijk AIJM, Wood EF. 2020. Global Fully Distributed Parameter Regionalization Based on Observed Streamflow From 4,229 Headwater Catchments. Journal of Geophysical Research: Atmospheres 125 : e2019JD031485. DOI: 10.1029/2019JD03148
+
+## Example
+
+You can download mean zonal statistics
+```{r message=FALSE, warning=FALSE}
+library(HBVr)
+
+# Locate the shapefile
+f <- system.file("ex/lux.shp", package="terra")
+# Read it as SpatVector
+v <- vect(f)
+
+zonal_stat <- 
+  hbv_get_parameters(
+    aoi = v,
+    folds = 1,
+    mean = TRUE
+  )
+
+zonal_stat
+```
+
+or retrieve a `SpatRaster` objects:
+
+```{r}
+
+rasters <- 
+    hbv_get_parameters(
+    aoi = v,
+    folds = 1,
+    mean = FALSE
+  )
+
+plot(rasters[[1]])
+```
+

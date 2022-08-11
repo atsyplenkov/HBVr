@@ -14,14 +14,6 @@ knitr::opts_chunk$set(
 )
 ```
 
-```{r setup, warning=FALSE, message=FALSE}
-library(HBVr)
-library(tmap)
-library(terra)
-library(sf)
-```
-
-
 ## 1) Disclaimer & Preprocessing logic
 Beneath is the example how can one download and preprocess HBV parameter maps created by Beck et al. ([2020](http://www.gloh2o.org/hbv/)). The initial dataset was distributed as NetCDF file. It contains ten cross-validation folds of 12 parameters:
 
@@ -62,8 +54,8 @@ Let's imagine, you need to download **first**, **second** and **fifth** folds fo
 
 ```{r, message=TRUE, warning=FALSE, out.width = "90%", fig.align='center'}
 library(HBVr)
-library(tmap) # for vizualisztion purposes
-library(sf) # for vizualisztion purposes
+# library(tmap) # for vizualisztion purposes
+# library(sf) # for vizualisztion purposes
 
 # Locate the shapefile
 f <- system.file("ex/lux.shp", package="terra")
@@ -71,11 +63,11 @@ f <- system.file("ex/lux.shp", package="terra")
 v <- vect(f)
 
 # Plot it!
-tmap_mode("view")
-
-tm_basemap("Stamen.Terrain") +
-  tm_shape(st_as_sf(v)) +
-  tm_polygons()
+# tmap_mode("view")
+# 
+# tm_basemap("Stamen.Terrain") +
+#   tm_shape(st_as_sf(v)) +
+#   tm_polygons()
 ```
 
 Initially, the `hbv_get_parameters` function has two types of output. First is the mean zonal statistics which is computed with `terra::global` in the background. Second one is the simple `SpatRaster` output.

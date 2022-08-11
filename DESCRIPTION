@@ -21,5 +21,6 @@ Suggests:
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
 VignetteBuilder: knitr
-URL: https://github.com/atsyplenkov/HBVr
+URL: https://github.com/atsyplenkov/HBVr,
+    https://atsyplenkov.github.io/HBVr/
 BugReports: https://github.com/atsyplenkov/HBVr/issues

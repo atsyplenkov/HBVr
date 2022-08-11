@@ -7,6 +7,7 @@
 
 [![Lifecycle:
 experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
+[![R-CMD-check](https://github.com/atsyplenkov/HBVr/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/atsyplenkov/HBVr/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 The goal of HBVr is to ease the accessebility of HBV Global Parameter

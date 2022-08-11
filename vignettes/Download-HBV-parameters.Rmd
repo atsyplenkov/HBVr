@@ -1,5 +1,5 @@
 ---
-title: "Download-HBV-parameters"
+title: "Download HBV parameters"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{Download-HBV-parameters}
@@ -7,81 +7,20 @@ vignette: >
   %\VignetteEncoding{UTF-8}
 ---
 
-
-<!-- Some JS to enable code folding -->
-<!-- <script> -->
-<!-- $(document).ready(function() { -->
-
-<!--   $chunks = $('.fold'); -->
-
-<!--   $chunks.each(function () { -->
-
-<!--     // add button to source code chunks -->
-<!--     if ( $(this).hasClass('s') ) { -->
-<!--       $('pre.r', this).prepend("<div class=\"showopt\">Show Source</div><br style=\"line-height:22px;\"/>"); -->
-<!--       $('pre.r', this).children('code').attr('class', 'folded'); -->
-<!--     } -->
-
-<!--     // add button to output chunks -->
-<!--     if ( $(this).hasClass('o') ) { -->
-<!--       $('pre:not(.r)', this).has('code').prepend("<div class=\"showopt\">Show Output</div><br style=\"line-height:22px;\"/>"); -->
-<!--       $('pre:not(.r)', this).children('code:not(r)').addClass('folded'); -->
-
-<!--       // add button to plots -->
-<!--       $(this).find('img').wrap('<pre class=\"plot\"></pre>'); -->
-<!--       $('pre.plot', this).prepend("<div class=\"showopt\">Show Plot</div><br style=\"line-height:22px;\"/>"); -->
-<!--       $('pre.plot', this).children('img').addClass('folded'); -->
-
-<!--     } -->
-<!--   }); -->
-
-<!--   // hide all chunks when document is loaded -->
-<!--   $('.folded').css('display', 'none') -->
-
-<!--   // function to toggle the visibility -->
-<!--   $('.showopt').click(function() { -->
-<!--     var label = $(this).html(); -->
-<!--     if (label.indexOf("Show") >= 0) { -->
-<!--       $(this).html(label.replace("Show", "Hide")); -->
-<!--     } else { -->
-<!--       $(this).html(label.replace("Hide", "Show")); -->
-<!--     } -->
-<!--     $(this).siblings('code, img').slideToggle('fast', 'swing'); -->
-<!--   }); -->
-<!-- }); -->
-<!-- </script> -->
-
-
-<!-- <style> -->
-<!-- .showopt { -->
-<!--   background-color: #163d5a; -->
-<!--   color: #FFFFFF;  -->
-<!--   width: 100px; -->
-<!--   height: 20px; -->
-<!--   text-align: center; -->
-<!--   vertical-align: middle !important; -->
-<!--   float: right; -->
-<!--   font-family: sans-serif; -->
-<!--   border-radius: 8px; -->
-<!-- } -->
-
-<!-- .showopt:hover { -->
-<!--     background-color: #dfe4f2; -->
-<!--     color: #004c93; -->
-<!-- } -->
-
-<!-- pre.plot { -->
-<!--   background-color: white !important; -->
-<!-- } -->
-<!-- </style> -->
-
-
 ```{r, include = FALSE}
 knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>"
 )
 ```
+
+```{r setup, warning=FALSE, message=FALSE}
+library(HBVr)
+library(tmap)
+library(terra)
+library(sf)
+```
+
 
 ## 1) Disclaimer & Preprocessing logic
 Beneath is the example how can one download and preprocess HBV parameter maps created by Beck et al. ([2020](http://www.gloh2o.org/hbv/)). The initial dataset was distributed as NetCDF file. It contains ten cross-validation folds of 12 parameters:
@@ -112,7 +51,7 @@ Beneath is the example how can one download and preprocess HBV parameter maps cr
 
 We converted every fold to the Cloud-Optimized GeoTiff (COG) using the following GDAL command: `gdal_translate ordinary.tif COG.tiff -co COPY_SRC_OVERVIEWS=YES -co COMPRESS=LZW -co TILED=YES`. The final COG was validated using the python [script](https://github.com/OSGeo/gdal/blob/master/swig/python/gdal-utils/osgeo_utils/samples/validate_cloud_optimized_geotiff.py). Thus we ended up with 10 COGs with 12 bands each.
 
-Overall logic of the preprocessing workflow can be visualized as follows:
+<!-- Overall logic of the preprocessing workflow can be visualized as follows: -->
 
 
 ## 2) Example workflow
@@ -121,7 +60,7 @@ The essential aim of the `hbv_get_parameters` function is to ease the accessibil
 
 Let's imagine, you need to download **first**, **second** and **fifth** folds for the Luxembourg.
 
-```{r, message=TRUE, warning=FALSE, out.width="100%"}
+```{r, message=TRUE, warning=FALSE, out.width = "90%", fig.align='center'}
 library(HBVr)
 library(tmap) # for vizualisztion purposes
 library(sf) # for vizualisztion purposes

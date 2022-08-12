@@ -84,6 +84,68 @@
 
     
     
+<!-- Some JS magic from SO -->
+<!-- https://stackoverflow.com/a/65655397/9300556 -->
+<script>
+$(document).ready(function() {
+
+  $chunks = $('.fold');
+
+  $chunks.each(function () {
+
+    if ( $(this).hasClass('s') ) {
+      $('pre.r', this).prepend("<div class=\"showopt\">Show Source</div><br style=\"line-height:22px;\"/>");
+      $('pre.r', this).children('code').attr('class', 'folded');
+    }
+
+    if ( $(this).hasClass('o') ) {
+      $('pre:not(.r)', this).has('code').prepend("<div class=\"showopt\">Show Output</div><br style=\"line-height:22px;\"/>");
+      $('pre:not(.r)', this).children('code:not(r)').addClass('folded');
+
+      // add button to plots
+      $(this).find('img').wrap('<pre class=\"plot\"></pre>');
+      $('pre.plot', this).prepend("<div class=\"showopt\">Show Plot</div><br style=\"line-height:22px;\"/>");
+      $('pre.plot', this).children('img').addClass('folded');
+
+    }
+  });
+
+  // hide all chunks when document is loaded
+  $('.folded').css('display', 'none')
+
+  // function to toggle the visibility
+  $('.showopt').click(function() {
+    var label = $(this).html();
+    if (label.indexOf("Show") >= 0) {
+      $(this).html(label.replace("Show", "Hide"));
+    } else {
+      $(this).html(label.replace("Hide", "Show"));
+    }
+    $(this).siblings('code, img').slideToggle('fast', 'swing');
+  });
+});
+</script><style>
+.showopt {
+  background-color: #004c93;
+  color: #FFFFFF; 
+  width: 100px;
+  height: 20px;
+  text-align: center;
+  vertical-align: middle !important;
+  float: right;
+  font-family: sans-serif;
+  border-radius: 8px;
+}
+
+.showopt:hover {
+    background-color: #dfe4f2;
+    color: #004c93;
+}
+
+pre.plot {
+  background-color: white !important;
+}
+</style>
 <div class="section level2">
 <h2 id="disclaimer-preprocessing-logic">1) Disclaimer &amp; Preprocessing logic<a class="anchor" aria-label="anchor" href="#disclaimer-preprocessing-logic"></a>
 </h2>
@@ -103,7 +165,10 @@
 <li><p><strong>CWH</strong> – Water holding capacity</p></li>
 </ul>
 <p>We converted every fold to the Cloud-Optimized GeoTiff (COG) using the following GDAL command: <code>gdal_translate ordinary.tif COG.tiff -co COPY_SRC_OVERVIEWS=YES -co COMPRESS=LZW -co TILED=YES</code>. The final COG was validated using the python <a href="https://github.com/OSGeo/gdal/blob/master/swig/python/gdal-utils/osgeo_utils/samples/validate_cloud_optimized_geotiff.py" class="external-link">script</a>. Thus we ended up with 10 COGs with 12 bands each.</p>
-<!-- Overall logic of the preprocessing workflow can be visualized as follows: -->
+Overall logic of the preprocessing workflow can be visualized as follows:
+<center>
+<img src="mermaid-diagram.png" style="width:100.0%">
+</center>
 </div>
 <div class="section level2">
 <h2 id="example-workflow">2) Example workflow<a class="anchor" aria-label="anchor" href="#example-workflow"></a>
@@ -139,7 +204,8 @@
 <span>  <span class="op">)</span></span>
 <span><span class="co">#&gt; Downloading rasters...</span></span>
 <span><span class="co">#&gt; Cropping rasters...</span></span></code></pre></div>
-<p>The output of <code>zonal_stat</code> is hidden below ↓ <!-- <div class="fold s o"> --></p>
+<p>The output of <code>zonal_stat</code> is hidden below ↓</p>
+<div class="fold s o">
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">zonal_stat</span></span>
 <span><span class="co">#&gt; $fold_1</span></span>
@@ -186,7 +252,7 @@
 <span><span class="co">#&gt; CFMAX   6.17519302</span></span>
 <span><span class="co">#&gt; CFR     0.02514114</span></span>
 <span><span class="co">#&gt; CWH     0.10989838</span></span></code></pre></div>
-<!-- </div> -->
+</div>
 <p>To download <code>SpatRaster</code> objects we need to run the following code chunk:</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span></span>
@@ -199,7 +265,8 @@
 <span><span class="co">#&gt; Downloading rasters...</span></span>
 <span><span class="co">#&gt; Cropping rasters...</span></span>
 <span><span class="co">#&gt; Projecting rasters...</span></span></code></pre></div>
-<p>The output of <code>rasters</code> is hidden below ↓ <!-- <div class="fold s o"> --></p>
+<p>The output of <code>rasters</code> is hidden below ↓</p>
+<div class="fold s o">
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">rasters</span></span>
 <span><span class="co">#&gt; $fold_1</span></span>
@@ -234,7 +301,7 @@
 <span><span class="co">#&gt; names       :     beta,       FC,         K0,         K1,         K2,        LP, ... </span></span>
 <span><span class="co">#&gt; min values  : 2.849582, 222.5757, 0.04999479, 0.05236027, 0.07841196, 0.6440166, ... </span></span>
 <span><span class="co">#&gt; max values  : 5.777176, 459.7742, 0.68407023, 0.29351634, 0.20001221, 1.0000000, ...</span></span></code></pre></div>
-<!-- </div> -->
+</div>
 <p>The function returns a list of <code>SpatRaster</code> objects. The first one, i.e. Fold 1, can be plotted like this:</p>
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/pkg/terra/man/plot.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">rasters</span><span class="op">[[</span><span class="fl">1</span><span class="op">]</span><span class="op">]</span><span class="op">)</span></span></code></pre></div>

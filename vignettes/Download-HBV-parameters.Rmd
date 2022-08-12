@@ -84,7 +84,7 @@ pre.plot {
 
 
 ## 1) Disclaimer & Preprocessing logic
-Beneath is the example how can one download and preprocess HBV parameter maps created by Beck et al. ([2020](http://www.gloh2o.org/hbv/)). The initial dataset was distributed as NetCDF file. It contains ten cross-validation folds of 12 parameters:
+Beneath is the example how can one download and preprocess HBV parameter maps (v0.8) created by Beck et al. ([2020](http://www.gloh2o.org/hbv/)). The initial dataset was distributed as NetCDF file. It contains ten cross-validation folds of 12 parameters:
 
 - **BETA** -- Shape coefficient of recharge function
 

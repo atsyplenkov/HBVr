@@ -1,6 +1,6 @@
 #' Download Global HBV Parameter Maps
 #'
-#' @description This function download Global HBV Parameter Maps
+#' @description This function download Global HBV Parameter Maps (v0.8)
 #' created by \emph{Beck et al.} (2020) and crop it to the shapefile
 #' boundaries.
 #'

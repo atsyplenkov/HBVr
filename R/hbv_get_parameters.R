@@ -1,16 +1,35 @@
 #' Download Global HBV Parameter Maps
 #'
-#' @description This function download Global HBV Parameter Maps (v0.8)
-#' created by \emph{Beck et al.} (2020) and crop it to the shapefile
-#' boundaries.
+#' @description This function download Global HBV Parameter Maps
+#' created by \emph{Beck et al.} (\href{https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2019JD031485}{2020})
+#' and crop it to the shapefile boundaries. See
+#' \href{http://www.gloh2o.org/hbv/}{GloH2O website} for details.
 #'
 #' @param aoi SpatVector. A polygon layer with area of interest.
 #' @param folds Numeric. A numeric vector from 1 to 10 indicating the
 #' folds numbers to process.
 #' @param mean Logical. If TRUE, return mean zonal statistics,
-#' calculated using \code{global} method from \code{terra} package
+#' calculated using \code{\link[terra]{global}} method from \pkg{terra} package
 #' @param warp Logical. If TRUE, reproject the HBV rasters to
 #'  \code{aoi} projection
+#' @param version Character. Can be used to determine the dataset version. Must be
+#' one of "v0.8" (original release from February 5, 2020) or "v0.9" (revised version
+#' from May 5, 2020). See details.
+#'
+#' @details Version history (according to \href{http://www.gloh2o.org/hbv/}{GloH2O website}):
+#'
+#' \describe{
+#'   \item{V0.9 (May 5, 2022)}{To avoid local minima, the authors reduced the number
+#'   of predictors to three and increased the number of generations to 2000. A selection
+#'   was made based on which predictors individually provided the best training score:
+#'   snowfall fraction of precipitation (\code{FSNOW}), mean topographic slope (\code{SLOPE}),
+#'   and soil clay content (\code{CLAY}). Increasing the number of generations to 2000
+#'   allowed the algorithm to find the true optimum, while lowering the spatial
+#'   resolution from 0.05° to 0.1° reduced computational requirements.}
+#'   \item{V0.8 (February 5, 2020)}{Original release corresponding to \emph{Beck et al.}
+#'   (\href{https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2019JD031485}{2020}).}
+#' }
+
 #'
 #' @return List
 #'
@@ -38,7 +57,8 @@ hbv_get_parameters <-
   function(aoi,
            folds = 1:10,
            mean = FALSE,
-           warp = TRUE){
+           warp = TRUE,
+           version = "v0.9"){
 
     # Some check
     stopifnot(
@@ -56,23 +76,46 @@ hbv_get_parameters <-
         all(folds %in% c(1:10))
     )
 
-    # List of fold urls
-    urls <-
-      c("/vsicurl/https://github.com/atsyplenkov/HBVr/releases/download/parameter-maps/correct_fold_0.tiff",
-        "/vsicurl/https://github.com/atsyplenkov/HBVr/releases/download/parameter-maps/correct_fold_1.tiff",
-        "/vsicurl/https://github.com/atsyplenkov/HBVr/releases/download/parameter-maps/correct_fold_2.tiff",
-        "/vsicurl/https://github.com/atsyplenkov/HBVr/releases/download/parameter-maps/correct_fold_3.tiff",
-        "/vsicurl/https://github.com/atsyplenkov/HBVr/releases/download/parameter-maps/correct_fold_4.tiff",
-        "/vsicurl/https://github.com/atsyplenkov/HBVr/releases/download/parameter-maps/correct_fold_5.tiff",
-        "/vsicurl/https://github.com/atsyplenkov/HBVr/releases/download/parameter-maps/correct_fold_6.tiff",
-        "/vsicurl/https://github.com/atsyplenkov/HBVr/releases/download/parameter-maps/correct_fold_7.tiff",
-        "/vsicurl/https://github.com/atsyplenkov/HBVr/releases/download/parameter-maps/correct_fold_8.tiff",
-        "/vsicurl/https://github.com/atsyplenkov/HBVr/releases/download/parameter-maps/correct_fold_9.tiff")
+    # Check the dataset version
+    if (version == "v0.9") {
+
+      urls <-
+        c("/vsicurl/https://github.com/atsyplenkov/HBVr/releases/download/parameter-maps-v09/fold_0.tiff",
+          "/vsicurl/https://github.com/atsyplenkov/HBVr/releases/download/parameter-maps-v09/fold_1.tiff",
+          "/vsicurl/https://github.com/atsyplenkov/HBVr/releases/download/parameter-maps-v09/fold_2.tiff",
+          "/vsicurl/https://github.com/atsyplenkov/HBVr/releases/download/parameter-maps-v09/fold_3.tiff",
+          "/vsicurl/https://github.com/atsyplenkov/HBVr/releases/download/parameter-maps-v09/fold_4.tiff",
+          "/vsicurl/https://github.com/atsyplenkov/HBVr/releases/download/parameter-maps-v09/fold_5.tiff",
+          "/vsicurl/https://github.com/atsyplenkov/HBVr/releases/download/parameter-maps-v09/fold_6.tiff",
+          "/vsicurl/https://github.com/atsyplenkov/HBVr/releases/download/parameter-maps-v09/fold_7.tiff",
+          "/vsicurl/https://github.com/atsyplenkov/HBVr/releases/download/parameter-maps-v09/fold_8.tiff",
+          "/vsicurl/https://github.com/atsyplenkov/HBVr/releases/download/parameter-maps-v09/fold_9.tiff")
+
+    } else if (version == "v0.8") {
+
+      # List of fold urls
+      urls <-
+        c("/vsicurl/https://github.com/atsyplenkov/HBVr/releases/download/parameter-maps/correct_fold_0.tiff",
+          "/vsicurl/https://github.com/atsyplenkov/HBVr/releases/download/parameter-maps/correct_fold_1.tiff",
+          "/vsicurl/https://github.com/atsyplenkov/HBVr/releases/download/parameter-maps/correct_fold_2.tiff",
+          "/vsicurl/https://github.com/atsyplenkov/HBVr/releases/download/parameter-maps/correct_fold_3.tiff",
+          "/vsicurl/https://github.com/atsyplenkov/HBVr/releases/download/parameter-maps/correct_fold_4.tiff",
+          "/vsicurl/https://github.com/atsyplenkov/HBVr/releases/download/parameter-maps/correct_fold_5.tiff",
+          "/vsicurl/https://github.com/atsyplenkov/HBVr/releases/download/parameter-maps/correct_fold_6.tiff",
+          "/vsicurl/https://github.com/atsyplenkov/HBVr/releases/download/parameter-maps/correct_fold_7.tiff",
+          "/vsicurl/https://github.com/atsyplenkov/HBVr/releases/download/parameter-maps/correct_fold_8.tiff",
+          "/vsicurl/https://github.com/atsyplenkov/HBVr/releases/download/parameter-maps/correct_fold_9.tiff")
+
+    } else {
+
+      stop("Dataset version should either 'v0.8' or 'v0.9'. See help ?hbv_get_parameters")
+
+    }
 
     # Select url for processing
     selected_urls <- urls[folds]
     fold_names <-
-      paste0("fold_", c(1:10))[folds]
+      paste0("fold_", c(0:9))[folds]
 
     # Get shapefiles CRS
     aoi_crs <- terra::crs(aoi, proj = TRUE)
@@ -93,6 +136,22 @@ hbv_get_parameters <-
 
     # Set names
     names(cogs_crop) <- fold_names
+
+    # Fix for version v0.8 dataset
+    if (version == "v0.8") {
+
+      list_to_upper <-
+        function(x){
+
+          names(x) <-
+            toupper(names(x))
+
+          x
+        }
+
+      cogs_crop <- lapply(cogs_crop, list_to_upper)
+
+    }
 
     # Should we  return raster or mean statistics?
     if (mean) {

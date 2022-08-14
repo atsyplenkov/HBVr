@@ -84,7 +84,7 @@ pre.plot {
 
 
 ## 1) Disclaimer & Preprocessing logic
-Beneath is the example how can one download and preprocess HBV parameter maps (v0.8) created by Beck et al. ([2020](http://www.gloh2o.org/hbv/)). The initial dataset was distributed as NetCDF file. It contains ten cross-validation folds of 12 parameters:
+Beneath is the example how can one download and preprocess HBV parameter maps created by Beck et al. ([2020](http://www.gloh2o.org/hbv/)). The initial dataset was distributed as NetCDF file. The package provides an opportunity to retreive original (v0.8) and revised (v0.9) versions of the datasets. The **v0.8** version contains ten cross-validation folds of 12 parameters:
 
 - **BETA** -- Shape coefficient of recharge function
 
@@ -110,9 +110,18 @@ Beneath is the example how can one download and preprocess HBV parameter maps (v
 
 - **CWH** -- Water holding capacity
 
+In the **v0.9** version authors added four more parameters:
+
+- **MAXBAS** -- base of the triangular routing function (days)
+- **SFCF** -- Snowfall correction factor (-)
+- **PCORR** -- general precipitation correction factor (-)
+- **CET** -- potential evaporation correction factor (-)
+
+
+
 We converted every fold to the Cloud-Optimized GeoTiff (COG) using the following GDAL command: `gdal_translate ordinary.tif COG.tiff -co COPY_SRC_OVERVIEWS=YES -co COMPRESS=LZW -co TILED=YES`. The final COG was validated using the python [script](https://github.com/OSGeo/gdal/blob/master/swig/python/gdal-utils/osgeo_utils/samples/validate_cloud_optimized_geotiff.py). Thus we ended up with 10 COGs with 12 bands each.
 
-Overall logic of the preprocessing workflow can be visualized as follows:
+Overall logic of the preprocessing workflow (for v0.8 version) can be visualized as follows:
 <center>
 ![](mermaid-diagram.png){width="100%"}
 </center>

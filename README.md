@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# HBVr <img src='man/figures/logo.svg' align="right" height="139" />
+# HBVr <img src='man/figures/logo.webp' align="right" height="139" />
 
 <!-- badges: start -->
 
@@ -57,20 +57,24 @@ zonal_stat <-
 #> Cropping rasters...
 
 zonal_stat
-#> $fold_1
-#>               mean
-#> beta    3.28827362
-#> FC    397.27255745
-#> K0      0.45688133
-#> K1      0.33620186
-#> K2      0.15122986
-#> LP      0.67929192
-#> PERC    6.54499855
-#> UZL    73.98409042
-#> TT     -3.25675583
-#> CFMAX   4.50942764
-#> CFR     0.08118668
-#> CWH     0.18391457
+#> $fold_0
+#>                mean
+#> BETA     3.59133975
+#> CET      0.00000000
+#> CFMAX    4.76274042
+#> CFR      0.02329523
+#> CWH      0.03688424
+#> FC     557.79513737
+#> K0       0.11312447
+#> K1       0.22010622
+#> K2       0.14379373
+#> LP       0.78630368
+#> MAXBAS   1.80986611
+#> PCORR    1.00000000
+#> PERC     3.55778855
+#> SFCF     1.00000000
+#> TT      -0.06733536
+#> UZL     56.14696222
 ```
 
 or retrieve a `SpatRaster` objects:

@@ -25,3 +25,15 @@ test_that("Fold number is out of range",{
   )
 
 })
+
+test_that("Invalid dataset version",{
+
+  expect_error(
+    hbv_get_parameters(v,
+                       folds = 1,
+                       version = "v0.7",
+                       mean = T,
+                       warp = F)
+  )
+
+})

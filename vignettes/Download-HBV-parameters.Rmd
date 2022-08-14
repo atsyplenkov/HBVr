@@ -87,27 +87,16 @@ pre.plot {
 Beneath is the example how can one download and preprocess HBV parameter maps created by Beck et al. ([2020](http://www.gloh2o.org/hbv/)). The initial dataset was distributed as NetCDF file. The package provides an opportunity to retreive original (v0.8) and revised (v0.9) versions of the datasets. The **v0.8** version contains ten cross-validation folds of 12 parameters:
 
 - **BETA** -- Shape coefficient of recharge function
-
 - **FC** -- Maximum soil moisture storage (mm)
-
 - **K0** -- Recession coefficient of upper zone (day<sup>−1</sup>)
-
 - **K1** -- Recession coefficient of upper zone (day<sup>−1</sup>)
-
 - **K2** -- Recession coefficient of lower zone (day<sup>−1</sup>)
-
 - **LP** -- Soil moisture value above which actual evaporation reaches potential evaporation
-
 - **PERC** -- Maximum percolation to lower zone (mm day<sup>−1</sup>)
-
 - **UZL** -- Threshold parameter for extra outflow from upper zone (mm)
-
 - **TT** -- Threshold temperature (°C)
-
 - **CFMAX** -- Degree‐day factor (mm °<sup>−1</sup>1 day<sup>−1</sup>)
-
 - **CFR** -- Refreezing coefficient
-
 - **CWH** -- Water holding capacity
 
 In the **v0.9** version authors added four more parameters:

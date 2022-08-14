@@ -20,6 +20,7 @@ knitr::opts_chunk$set(
 [![R-CMD-check](https://github.com/atsyplenkov/HBVr/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/atsyplenkov/HBVr/actions/workflows/R-CMD-check.yaml)
 [![](https://img.shields.io/github/last-commit/atsyplenkov/HBVr.svg)](https://github.com/atsyplenkov/HBVr/commits/master)
 [![Project Status: Active - The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
+[![](https://app.codecov.io/gh/atsyplenkov/HBVr/branch/master/graph/badge.svg?token=2be15934-a1f6-438d-ae14-1440f26718ef)](https://app.codecov.io/gh/atsyplenkov/HBVr)
 <!-- badges: end -->
 
 The goal of HBVr is to ease the accessebility of HBV Global Parameter maps created by Beck et al. ([2020](http://www.gloh2o.org/hbv/)). Therefore this one-function package allows to download any of the cross-validation folds for your particular area of interest (AOI).

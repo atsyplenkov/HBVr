@@ -4,7 +4,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="HBVr">
 <title>Download HBV parameters • HBVr</title>
 <!-- favicons --><link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
@@ -12,121 +13,209 @@
 <link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png">
 <link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png">
 <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png">
-<!-- jquery --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script><!-- Bootstrap --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script><!-- bootstrap-toc --><link rel="stylesheet" href="../bootstrap-toc.css">
-<script src="../bootstrap-toc.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
+<script src="../deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="../deps/bootstrap-5.1.3/bootstrap.min.css" rel="stylesheet">
+<script src="../deps/bootstrap-5.1.3/bootstrap.bundle.min.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
-<!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- pkgdown --><link href="../pkgdown.css" rel="stylesheet">
-<script src="../pkgdown.js"></script><meta property="og:title" content="Download HBV parameters">
+<!-- bootstrap-toc --><script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- search --><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- pkgdown --><script src="../pkgdown.js"></script><meta property="og:title" content="Download HBV parameters">
 <meta property="og:description" content="HBVr">
-<meta property="og:image" content="/logo.svg">
+<meta property="og:image" content="https://atsyplenkov.github.io/HBVr/logo.svg">
 <!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script><!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]-->
 </head>
-<body data-spy="scroll" data-target="#toc">
+<body>
+    <a href="#main" class="visually-hidden-focusable">Skip to contents</a>
     
 
-    <div class="container template-article">
-      <header><div class="navbar navbar-default navbar-fixed-top" role="navigation">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <span class="navbar-brand">
-        <a class="navbar-link" href="../index.html">HBVr</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.0.1</span>
-      </span>
-    </div>
+    <nav class="navbar fixed-top navbar-light navbar-expand-lg bg-light"><div class="container">
+    
+    <a class="navbar-brand me-2" href="../index.html">HBVr</a>
 
-    <div id="navbar" class="navbar-collapse collapse">
-      <ul class="nav navbar-nav">
-<li>
-  <a href="../reference/index.html">Reference</a>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.0.2</small>
+
+    
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div id="navbar" class="collapse navbar-collapse ms-3">
+      <ul class="navbar-nav me-auto">
+<li class="nav-item">
+  <a class="nav-link" href="../reference/index.html">Reference</a>
 </li>
-<li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-    Articles
-     
-    <span class="caret"></span>
-  </a>
-  <ul class="dropdown-menu" role="menu">
-<li>
-      <a href="../articles/Download-HBV-parameters.html">Download HBV parameters</a>
-    </li>
-  </ul>
-</li>
-      </ul>
-<ul class="nav navbar-nav navbar-right">
-<li>
-  <a href="https://github.com/atsyplenkov/HBVr/" class="external-link">
-    <span class="fab fa-github fa-lg"></span>
-     
-  </a>
-</li>
-      </ul>
-</div>
-<!--/.nav-collapse -->
+<li class="active nav-item dropdown">
+  <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown-articles">Articles</a>
+  <div class="dropdown-menu" aria-labelledby="dropdown-articles">
+    <a class="dropdown-item" href="../articles/Download-HBV-parameters.html">Download HBV parameters</a>
   </div>
-<!--/.container -->
+</li>
+<li class="nav-item">
+  <a class="nav-link" href="../news/index.html">Changelog</a>
+</li>
+      </ul>
+<form class="form-inline my-2 my-lg-0" role="search">
+        <input type="search" class="form-control me-sm-2" aria-label="Toggle navigation" name="search-input" data-search-index="../search.json" id="search-input" placeholder="Search for" autocomplete="off">
+</form>
+
+      <ul class="navbar-nav">
+<li class="nav-item">
+  <a class="external-link nav-link" href="https://github.com/atsyplenkov/HBVr/" aria-label="github">
+    <span class="fab fa fab fa-github fa-lg"></span>
+     
+  </a>
+</li>
+      </ul>
 </div>
-<!--/.navbar -->
 
-      
+    
+  </div>
+</nav><div class="container template-article">
 
-      </header><div class="row">
-  <div class="col-md-9 contents">
-    <div class="page-header toc-ignore">
-      <h1 data-toc-skip>Download HBV parameters</h1>
+
+
+
+<div class="row">
+  <main id="main" class="col-md-9"><div class="page-header">
+      <img src="../logo.svg" class="logo" alt=""><h1>Download HBV parameters</h1>
             
       
       <small class="dont-index">Source: <a href="https://github.com/atsyplenkov/HBVr/blob/HEAD/vignettes/Download-HBV-parameters.Rmd" class="external-link"><code>vignettes/Download-HBV-parameters.Rmd</code></a></small>
-      <div class="hidden name"><code>Download-HBV-parameters.Rmd</code></div>
-
+      <div class="d-none name"><code>Download-HBV-parameters.Rmd</code></div>
     </div>
 
     
     
+<!-- Some JS magic from SO -->
+<!-- https://stackoverflow.com/a/65655397/9300556 -->
+<script>
+$(document).ready(function() {
+
+  $chunks = $('.fold');
+
+  $chunks.each(function () {
+
+    if ( $(this).hasClass('s') ) {
+      $('pre.r', this).prepend("<div class=\"showopt\">Show Source</div><br style=\"line-height:22px;\"/>");
+      $('pre.r', this).children('code').attr('class', 'folded');
+    }
+
+    if ( $(this).hasClass('o') ) {
+      $('pre:not(.r)', this).has('code').prepend("<div class=\"showopt\">Show Output</div><br style=\"line-height:22px;\"/>");
+      $('pre:not(.r)', this).children('code:not(r)').addClass('folded');
+
+      // add button to plots
+      $(this).find('img').wrap('<pre class=\"plot\"></pre>');
+      $('pre.plot', this).prepend("<div class=\"showopt\">Show Plot</div><br style=\"line-height:22px;\"/>");
+      $('pre.plot', this).children('img').addClass('folded');
+
+    }
+  });
+
+  // hide all chunks when document is loaded
+  $('.folded').css('display', 'none')
+
+  // function to toggle the visibility
+  $('.showopt').click(function() {
+    var label = $(this).html();
+    if (label.indexOf("Show") >= 0) {
+      $(this).html(label.replace("Show", "Hide"));
+    } else {
+      $(this).html(label.replace("Hide", "Show"));
+    }
+    $(this).siblings('code, img').slideToggle('fast', 'swing');
+  });
+});
+</script><style>
+.showopt {
+  background-color: #648da3;
+  color: #000000; 
+  width: 100px;
+  height: 20px;
+  text-align: center;
+  vertical-align: middle !important;
+  float: left;
+  font-family: sans-serif;
+  border-radius: 8px;
+}
+
+.showopt:hover {
+    background-color: #aa5e4e;
+    color: #000000;
+}
+
+pre.plot {
+  background-color: white !important;
+}
+</style>
 <div class="section level2">
 <h2 id="disclaimer-preprocessing-logic">1) Disclaimer &amp; Preprocessing logic<a class="anchor" aria-label="anchor" href="#disclaimer-preprocessing-logic"></a>
 </h2>
 <p>Beneath is the example how can one download and preprocess HBV
 parameter maps created by Beck et al. (<a href="http://www.gloh2o.org/hbv/" class="external-link">2020</a>). The initial dataset was
-distributed as NetCDF file. It contains ten cross-validation folds of 12
+distributed as NetCDF file. The package provides an opportunity to
+retreive original (v0.8) and revised (v0.9) versions of the datasets.
+The <strong>v0.8</strong> version contains ten cross-validation folds of
+12 parameters:</p>
+<ul>
+<li>
+<strong>BETA</strong> – Shape coefficient of recharge function</li>
+<li>
+<strong>FC</strong> – Maximum soil moisture storage (mm)</li>
+<li>
+<strong>K0</strong> – Recession coefficient of upper zone
+(day<sup>−1</sup>)</li>
+<li>
+<strong>K1</strong> – Recession coefficient of upper zone
+(day<sup>−1</sup>)</li>
+<li>
+<strong>K2</strong> – Recession coefficient of lower zone
+(day<sup>−1</sup>)</li>
+<li>
+<strong>LP</strong> – Soil moisture value above which actual
+evaporation reaches potential evaporation</li>
+<li>
+<strong>PERC</strong> – Maximum percolation to lower zone (mm
+day<sup>−1</sup>)</li>
+<li>
+<strong>UZL</strong> – Threshold parameter for extra outflow from
+upper zone (mm)</li>
+<li>
+<strong>TT</strong> – Threshold temperature (°C)</li>
+<li>
+<strong>CFMAX</strong> – Degree‐day factor (mm °<sup>−1</sup>1
+day<sup>−1</sup>)</li>
+<li>
+<strong>CFR</strong> – Refreezing coefficient</li>
+<li>
+<strong>CWH</strong> – Water holding capacity</li>
+</ul>
+<p>In the <strong>v0.9</strong> version authors added four more
 parameters:</p>
 <ul>
-<li><p><strong>BETA</strong> – Shape coefficient of recharge
-function</p></li>
-<li><p><strong>FC</strong> – Maximum soil moisture storage (mm)</p></li>
-<li><p><strong>K0</strong> – Recession coefficient of upper zone
-(day<sup>−1</sup>)</p></li>
-<li><p><strong>K1</strong> – Recession coefficient of upper zone
-(day<sup>−1</sup>)</p></li>
-<li><p><strong>K2</strong> – Recession coefficient of lower zone
-(day<sup>−1</sup>)</p></li>
-<li><p><strong>LP</strong> – Soil moisture value above which actual
-evaporation reaches potential evaporation</p></li>
-<li><p><strong>PERC</strong> – Maximum percolation to lower zone (mm
-day<sup>−1</sup>)</p></li>
-<li><p><strong>UZL</strong> – Threshold parameter for extra outflow from
-upper zone (mm)</p></li>
-<li><p><strong>TT</strong> – Threshold temperature (°C)</p></li>
-<li><p><strong>CFMAX</strong> – Degree‐day factor (mm °<sup>−1</sup>1
-day<sup>−1</sup>)</p></li>
-<li><p><strong>CFR</strong> – Refreezing coefficient</p></li>
-<li><p><strong>CWH</strong> – Water holding capacity</p></li>
+<li>
+<strong>MAXBAS</strong> – base of the triangular routing function
+(days)</li>
+<li>
+<strong>SFCF</strong> – Snowfall correction factor (-)</li>
+<li>
+<strong>PCORR</strong> – general precipitation correction factor
+(-)</li>
+<li>
+<strong>CET</strong> – potential evaporation correction factor
+(-)</li>
 </ul>
 <p>We converted every fold to the Cloud-Optimized GeoTiff (COG) using
 the following GDAL command:
 <code>gdal_translate ordinary.tif COG.tiff -co COPY_SRC_OVERVIEWS=YES -co COMPRESS=LZW -co TILED=YES</code>.
 The final COG was validated using the python <a href="https://github.com/OSGeo/gdal/blob/master/swig/python/gdal-utils/osgeo_utils/samples/validate_cloud_optimized_geotiff.py" class="external-link">script</a>.
 Thus we ended up with 10 COGs with 12 bands each.</p>
-<!-- Overall logic of the preprocessing workflow can be visualized as follows: -->
+Overall logic of the preprocessing workflow (for v0.8 version) can be
+visualized as follows:
+<center>
+<img src="mermaid-diagram.png" style="width:100.0%">
+</center>
 </div>
 <div class="section level2">
 <h2 id="example-workflow">2) Example workflow<a class="anchor" aria-label="anchor" href="#example-workflow"></a>
@@ -173,55 +262,67 @@ Luxembourg.</p>
 <span>  <span class="op">)</span></span>
 <span><span class="co">#&gt; Downloading rasters...</span></span>
 <span><span class="co">#&gt; Cropping rasters...</span></span></code></pre></div>
-<p>The output of <code>zonal_stat</code> is hidden below ↓
-<!-- <div class="fold s o"> --></p>
+<p>The output of <code>zonal_stat</code> is hidden below ↓</p>
+<div class="fold s o">
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">zonal_stat</span></span>
+<span><span class="co">#&gt; $fold_0</span></span>
+<span><span class="co">#&gt;                mean</span></span>
+<span><span class="co">#&gt; BETA     3.59133975</span></span>
+<span><span class="co">#&gt; CET      0.00000000</span></span>
+<span><span class="co">#&gt; CFMAX    4.76274042</span></span>
+<span><span class="co">#&gt; CFR      0.02329523</span></span>
+<span><span class="co">#&gt; CWH      0.03688424</span></span>
+<span><span class="co">#&gt; FC     557.79513737</span></span>
+<span><span class="co">#&gt; K0       0.11312447</span></span>
+<span><span class="co">#&gt; K1       0.22010622</span></span>
+<span><span class="co">#&gt; K2       0.14379373</span></span>
+<span><span class="co">#&gt; LP       0.78630368</span></span>
+<span><span class="co">#&gt; MAXBAS   1.80986611</span></span>
+<span><span class="co">#&gt; PCORR    1.00000000</span></span>
+<span><span class="co">#&gt; PERC     3.55778855</span></span>
+<span><span class="co">#&gt; SFCF     1.00000000</span></span>
+<span><span class="co">#&gt; TT      -0.06733536</span></span>
+<span><span class="co">#&gt; UZL     56.14696222</span></span>
+<span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; $fold_1</span></span>
-<span><span class="co">#&gt;               mean</span></span>
-<span><span class="co">#&gt; beta    3.28827362</span></span>
-<span><span class="co">#&gt; FC    397.27255745</span></span>
-<span><span class="co">#&gt; K0      0.45688133</span></span>
-<span><span class="co">#&gt; K1      0.33620186</span></span>
-<span><span class="co">#&gt; K2      0.15122986</span></span>
-<span><span class="co">#&gt; LP      0.67929192</span></span>
-<span><span class="co">#&gt; PERC    6.54499855</span></span>
-<span><span class="co">#&gt; UZL    73.98409042</span></span>
-<span><span class="co">#&gt; TT     -3.25675583</span></span>
-<span><span class="co">#&gt; CFMAX   4.50942764</span></span>
-<span><span class="co">#&gt; CFR     0.08118668</span></span>
-<span><span class="co">#&gt; CWH     0.18391457</span></span>
+<span><span class="co">#&gt;                 mean</span></span>
+<span><span class="co">#&gt; BETA    5.235857e+00</span></span>
+<span><span class="co">#&gt; CET     0.000000e+00</span></span>
+<span><span class="co">#&gt; CFMAX   2.665556e+00</span></span>
+<span><span class="co">#&gt; CFR     2.929959e-04</span></span>
+<span><span class="co">#&gt; CWH     6.203691e-04</span></span>
+<span><span class="co">#&gt; FC      6.595314e+02</span></span>
+<span><span class="co">#&gt; K0      9.967822e-02</span></span>
+<span><span class="co">#&gt; K1      2.003403e-01</span></span>
+<span><span class="co">#&gt; K2      1.708671e-01</span></span>
+<span><span class="co">#&gt; LP      9.336371e-01</span></span>
+<span><span class="co">#&gt; MAXBAS  2.038171e+00</span></span>
+<span><span class="co">#&gt; PCORR   1.000000e+00</span></span>
+<span><span class="co">#&gt; PERC    3.316196e-01</span></span>
+<span><span class="co">#&gt; SFCF    1.000000e+00</span></span>
+<span><span class="co">#&gt; TT     -2.557204e-01</span></span>
+<span><span class="co">#&gt; UZL     5.925521e+01</span></span>
 <span><span class="co">#&gt; </span></span>
-<span><span class="co">#&gt; $fold_2</span></span>
-<span><span class="co">#&gt;               mean</span></span>
-<span><span class="co">#&gt; beta    3.40123062</span></span>
-<span><span class="co">#&gt; FC    181.61276817</span></span>
-<span><span class="co">#&gt; K0      0.15298271</span></span>
-<span><span class="co">#&gt; K1      0.30910225</span></span>
-<span><span class="co">#&gt; K2      0.12298813</span></span>
-<span><span class="co">#&gt; LP      0.40615349</span></span>
-<span><span class="co">#&gt; PERC    7.60681343</span></span>
-<span><span class="co">#&gt; UZL    64.74375725</span></span>
-<span><span class="co">#&gt; TT     -0.36138115</span></span>
-<span><span class="co">#&gt; CFMAX   5.41066704</span></span>
-<span><span class="co">#&gt; CFR     0.01381912</span></span>
-<span><span class="co">#&gt; CWH     0.16261673</span></span>
-<span><span class="co">#&gt; </span></span>
-<span><span class="co">#&gt; $fold_5</span></span>
-<span><span class="co">#&gt;               mean</span></span>
-<span><span class="co">#&gt; beta    4.60768394</span></span>
-<span><span class="co">#&gt; FC    348.73093376</span></span>
-<span><span class="co">#&gt; K0      0.26133881</span></span>
-<span><span class="co">#&gt; K1      0.20693245</span></span>
-<span><span class="co">#&gt; K2      0.16530495</span></span>
-<span><span class="co">#&gt; LP      0.93026009</span></span>
-<span><span class="co">#&gt; PERC    1.82667274</span></span>
-<span><span class="co">#&gt; UZL    49.68159256</span></span>
-<span><span class="co">#&gt; TT     -1.33735924</span></span>
-<span><span class="co">#&gt; CFMAX   6.17519302</span></span>
-<span><span class="co">#&gt; CFR     0.02514114</span></span>
-<span><span class="co">#&gt; CWH     0.10989838</span></span></code></pre></div>
-<!-- </div> -->
+<span><span class="co">#&gt; $fold_4</span></span>
+<span><span class="co">#&gt;                mean</span></span>
+<span><span class="co">#&gt; BETA   4.567642e+00</span></span>
+<span><span class="co">#&gt; CET    0.000000e+00</span></span>
+<span><span class="co">#&gt; CFMAX  3.155823e+00</span></span>
+<span><span class="co">#&gt; CFR    3.054426e-02</span></span>
+<span><span class="co">#&gt; CWH    3.499128e-05</span></span>
+<span><span class="co">#&gt; FC     5.611259e+02</span></span>
+<span><span class="co">#&gt; K0     5.050571e-02</span></span>
+<span><span class="co">#&gt; K1     2.136054e-01</span></span>
+<span><span class="co">#&gt; K2     1.490991e-01</span></span>
+<span><span class="co">#&gt; LP     8.979798e-01</span></span>
+<span><span class="co">#&gt; MAXBAS 1.969578e+00</span></span>
+<span><span class="co">#&gt; PCORR  1.000000e+00</span></span>
+<span><span class="co">#&gt; PERC   2.001591e+00</span></span>
+<span><span class="co">#&gt; SFCF   1.000000e+00</span></span>
+<span><span class="co">#&gt; TT     1.804570e-01</span></span>
+<span><span class="co">#&gt; UZL    9.997002e+01</span></span></code></pre></div>
+</div>
 <p>To download <code>SpatRaster</code> objects we need to run the
 following code chunk:</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
@@ -235,43 +336,43 @@ following code chunk:</p>
 <span><span class="co">#&gt; Downloading rasters...</span></span>
 <span><span class="co">#&gt; Cropping rasters...</span></span>
 <span><span class="co">#&gt; Projecting rasters...</span></span></code></pre></div>
-<p>The output of <code>rasters</code> is hidden below ↓
-<!-- <div class="fold s o"> --></p>
+<p>The output of <code>rasters</code> is hidden below ↓</p>
+<div class="fold s o">
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">rasters</span></span>
+<span><span class="co">#&gt; $fold_0</span></span>
+<span><span class="co">#&gt; class       : SpatRaster </span></span>
+<span><span class="co">#&gt; dimensions  : 8, 8, 16  (nrow, ncol, nlyr)</span></span>
+<span><span class="co">#&gt; resolution  : 0.1, 0.1  (x, y)</span></span>
+<span><span class="co">#&gt; extent      : 5.7, 6.5, 49.4, 50.2  (xmin, xmax, ymin, ymax)</span></span>
+<span><span class="co">#&gt; coord. ref. : +proj=longlat +datum=WGS84 +no_defs </span></span>
+<span><span class="co">#&gt; source      : memory </span></span>
+<span><span class="co">#&gt; names       :         BETA,          CET,        CFMAX,          CFR,          CWH,           FC, ... </span></span>
+<span><span class="co">#&gt; min values  :   2.75072718,   0.00000000,   4.12055969,   0.02307616,   0.03650405, 526.22003174, ... </span></span>
+<span><span class="co">#&gt; max values  :   4.07646799,   0.00000000,   5.26003885,   0.02346940,   0.03710934, 596.85559082, ... </span></span>
+<span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; $fold_1</span></span>
 <span><span class="co">#&gt; class       : SpatRaster </span></span>
-<span><span class="co">#&gt; dimensions  : 15, 16, 12  (nrow, ncol, nlyr)</span></span>
-<span><span class="co">#&gt; resolution  : 0.04998981, 0.04998981  (x, y)</span></span>
-<span><span class="co">#&gt; extent      : 5.749202, 6.549039, 49.43621, 50.18605  (xmin, xmax, ymin, ymax)</span></span>
+<span><span class="co">#&gt; dimensions  : 8, 8, 16  (nrow, ncol, nlyr)</span></span>
+<span><span class="co">#&gt; resolution  : 0.1, 0.1  (x, y)</span></span>
+<span><span class="co">#&gt; extent      : 5.7, 6.5, 49.4, 50.2  (xmin, xmax, ymin, ymax)</span></span>
 <span><span class="co">#&gt; coord. ref. : +proj=longlat +datum=WGS84 +no_defs </span></span>
 <span><span class="co">#&gt; source      : memory </span></span>
-<span><span class="co">#&gt; names       :         beta,           FC,           K0,           K1,           K2,           LP, ... </span></span>
-<span><span class="co">#&gt; min values  :   1.28084409,  87.36705017,   0.16609080,   0.12555264,   0.08126038,   0.50354737, ... </span></span>
-<span><span class="co">#&gt; max values  :   4.70392990, 782.77252197,   0.62957668,   0.43071902,   0.20001221,   0.79523355, ... </span></span>
+<span><span class="co">#&gt; names       :          BETA,           CET,         CFMAX,           CFR,           CWH,            FC, ... </span></span>
+<span><span class="co">#&gt; min values  :  3.752313e+00,  0.000000e+00,  2.646058e+00,  0.000000e+00,  5.433661e-04,  5.951489e+02, ... </span></span>
+<span><span class="co">#&gt; max values  :  6.000000e+00,  0.000000e+00,  2.686393e+00,  1.583559e-03,  7.155714e-04,  7.269780e+02, ... </span></span>
 <span><span class="co">#&gt; </span></span>
-<span><span class="co">#&gt; $fold_2</span></span>
+<span><span class="co">#&gt; $fold_4</span></span>
 <span><span class="co">#&gt; class       : SpatRaster </span></span>
-<span><span class="co">#&gt; dimensions  : 15, 16, 12  (nrow, ncol, nlyr)</span></span>
-<span><span class="co">#&gt; resolution  : 0.04998981, 0.04998981  (x, y)</span></span>
-<span><span class="co">#&gt; extent      : 5.749202, 6.549039, 49.43621, 50.18605  (xmin, xmax, ymin, ymax)</span></span>
+<span><span class="co">#&gt; dimensions  : 8, 8, 16  (nrow, ncol, nlyr)</span></span>
+<span><span class="co">#&gt; resolution  : 0.1, 0.1  (x, y)</span></span>
+<span><span class="co">#&gt; extent      : 5.7, 6.5, 49.4, 50.2  (xmin, xmax, ymin, ymax)</span></span>
 <span><span class="co">#&gt; coord. ref. : +proj=longlat +datum=WGS84 +no_defs </span></span>
 <span><span class="co">#&gt; source      : memory </span></span>
-<span><span class="co">#&gt; names       :         beta,           FC,           K0,           K1,           K2,           LP, ... </span></span>
-<span><span class="co">#&gt; min values  :   1.00000000,  65.61856079,   0.04998779,   0.16199233,   0.07535070,   0.20001221, ... </span></span>
-<span><span class="co">#&gt; max values  :   5.99790430, 360.89816284,   0.31310526,   0.43859461,   0.17253636,   0.79335505, ... </span></span>
-<span><span class="co">#&gt; </span></span>
-<span><span class="co">#&gt; $fold_5</span></span>
-<span><span class="co">#&gt; class       : SpatRaster </span></span>
-<span><span class="co">#&gt; dimensions  : 15, 16, 12  (nrow, ncol, nlyr)</span></span>
-<span><span class="co">#&gt; resolution  : 0.04998981, 0.04998981  (x, y)</span></span>
-<span><span class="co">#&gt; extent      : 5.749202, 6.549039, 49.43621, 50.18605  (xmin, xmax, ymin, ymax)</span></span>
-<span><span class="co">#&gt; coord. ref. : +proj=longlat +datum=WGS84 +no_defs </span></span>
-<span><span class="co">#&gt; source      : memory </span></span>
-<span><span class="co">#&gt; names       :          beta,            FC,            K0,            K1,            K2,            LP, ... </span></span>
-<span><span class="co">#&gt; min values  :  2.849582e+00,  2.225757e+02,  4.999479e-02,  5.236027e-02,  7.841196e-02,  6.440166e-01, ... </span></span>
-<span><span class="co">#&gt; max values  :    5.77717590,  459.77423096,    0.68407023,    0.29351634,    0.20001221,    1.00000000, ...</span></span></code></pre></div>
-<!-- </div> -->
+<span><span class="co">#&gt; names       :          BETA,           CET,         CFMAX,           CFR,           CWH,            FC, ... </span></span>
+<span><span class="co">#&gt; min values  :  3.373822e+00,  0.000000e+00,  3.016764e+00,  3.044694e-02,  2.118881e-05,  5.011906e+02, ... </span></span>
+<span><span class="co">#&gt; max values  :  5.262473e+00,  0.000000e+00,  3.247912e+00,  3.059574e-02,  5.475432e-05,  6.238236e+02, ...</span></span></code></pre></div>
+</div>
 <p>The function returns a list of <code>SpatRaster</code> objects. The
 first one, i.e. Fold 1, can be plotted like this:</p>
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
@@ -286,33 +387,26 @@ first one, i.e. Fold 1, can be plotted like this:</p>
 <!--   tm_raster() -->
 <!-- ``` -->
 </div>
-  </div>
-
-  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
-
-        <nav id="toc" data-toggle="toc"><h2 data-toc-skip>Contents</h2>
-    </nav>
-</div>
-
+  </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
+    </nav></aside>
 </div>
 
 
 
-      <footer><div class="copyright">
+    <footer><div class="pkgdown-footer-left">
   <p></p>
 <p>Developed by Anatoly Tsyplenkov.</p>
 </div>
 
-<div class="pkgdown">
+<div class="pkgdown-footer-right">
   <p></p>
 <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.6.</p>
 </div>
 
-      </footer>
+    </footer>
 </div>
 
   
-
 
   
 

@@ -12,7 +12,7 @@ experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](h
 [![Project Status: Active - The project has reached a stable, usable
 state and is being actively
 developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
-[![](https://app.codecov.io/gh/atsyplenkov/HBVr/branch/master/graph/badge.svg?token=2be15934-a1f6-438d-ae14-1440f26718ef)](https://app.codecov.io/gh/atsyplenkov/HBVr)
+[![codecov](https://codecov.io/gh/atsyplenkov/HBVr/branch/master/graph/badge.svg?token=8OF8L07CTG)](https://codecov.io/gh/atsyplenkov/HBVr)
 <!-- badges: end -->
 
 The goal of HBVr is to ease the accessebility of HBV Global Parameter

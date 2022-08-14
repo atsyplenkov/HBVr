@@ -8,6 +8,10 @@
 [![Lifecycle:
 experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 [![R-CMD-check](https://github.com/atsyplenkov/HBVr/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/atsyplenkov/HBVr/actions/workflows/R-CMD-check.yaml)
+[![](https://img.shields.io/github/last-commit/atsyplenkov/HBVr.svg)](https://github.com/atsyplenkov/HBVr/commits/master)
+[![Project Status: Active - The project has reached a stable, usable
+state and is being actively
+developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
 <!-- badges: end -->
 
 The goal of HBVr is to ease the accessebility of HBV Global Parameter

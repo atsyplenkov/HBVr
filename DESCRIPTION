@@ -8,7 +8,7 @@ Authors@R:
     role = c("cre", "aut"),
     comment = c(ORCID = "0000-0003-4144-8402")))
 Maintainer: Anatoly Tsyplenkov <atsyplenkov@gmail.com>
-Description: This package offers a user-friendly approach to access the regionalized HBV parameters maps created by Beck et al. (v0.8).
+Description: This package offers a user-friendly approach to access the regionalized HBV parameters maps created by Beck et al. (2020).
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true

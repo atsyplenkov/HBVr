@@ -3,7 +3,7 @@ pkgdown: 2.0.6
 pkgdown_sha: ~
 articles:
   Download-HBV-parameters: Download-HBV-parameters.html
-last_built: 2022-08-14T10:32Z
+last_built: 2022-08-15T07:42Z
 urls:
   reference: https://atsyplenkov.github.io/HBVr/reference
   article: https://atsyplenkov.github.io/HBVr/articles

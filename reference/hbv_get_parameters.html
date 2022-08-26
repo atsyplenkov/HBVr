@@ -67,7 +67,7 @@ and crop it to the shapefile boundaries. See
     <div class="section level2">
     <h2 id="ref-usage">Usage<a class="anchor" aria-label="anchor" href="#ref-usage"></a></h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">hbv_get_parameters</span><span class="op">(</span></span>
-<span>  <span class="va">aoi</span>,</span>
+<span>  <span class="va">AOI</span>,</span>
 <span>  folds <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fl">10</span>,</span>
 <span>  mean <span class="op">=</span> <span class="cn">FALSE</span>,</span>
 <span>  warp <span class="op">=</span> <span class="cn">TRUE</span>,</span>
@@ -77,7 +77,7 @@ and crop it to the shapefile boundaries. See
 
     <div class="section level2">
     <h2 id="arguments">Arguments<a class="anchor" aria-label="anchor" href="#arguments"></a></h2>
-    <dl><dt>aoi</dt>
+    <dl><dt>AOI</dt>
 <dd><p>SpatVector. A polygon layer with area of interest.</p></dd>
 
 
@@ -93,7 +93,7 @@ calculated using <code><a href="https://rdrr.io/pkg/terra/man/global.html" class
 
 <dt>warp</dt>
 <dd><p>Logical. If TRUE, reproject the HBV rasters to
-<code>aoi</code> projection</p></dd>
+<code>AOI</code> projection</p></dd>
 
 
 <dt>version</dt>

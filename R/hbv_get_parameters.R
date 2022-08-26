@@ -5,13 +5,13 @@
 #' and crop it to the shapefile boundaries. See
 #' \href{http://www.gloh2o.org/hbv/}{GloH2O website} for details.
 #'
-#' @param aoi SpatVector. A polygon layer with area of interest.
+#' @param AOI SpatVector. A polygon layer with area of interest.
 #' @param folds Numeric. A numeric vector from 1 to 10 indicating the
 #' folds numbers to process.
 #' @param mean Logical. If TRUE, return mean zonal statistics,
 #' calculated using \code{\link[terra]{global}} method from \pkg{terra} package
 #' @param warp Logical. If TRUE, reproject the HBV rasters to
-#'  \code{aoi} projection
+#'  \code{AOI} projection
 #' @param version Character. Can be used to determine the dataset version. Must be
 #' one of "v0.8" (original release from February 5, 2020) or "v0.9" (revised version
 #' from May 5, 2020). See details.
@@ -54,11 +54,18 @@
 #' @import terra
 
 hbv_get_parameters <-
-  function(aoi,
+  function(AOI,
            folds = 1:10,
            mean = FALSE,
            warp = TRUE,
            version = "v0.9"){
+
+    # Convert to SpatVect object
+    if (any(class(AOI) %in% c("sf", "sfc", "sfg"))) {
+      aoi <- terra::vect(AOI)
+    } else {
+      aoi <- AOI
+    }
 
     # Some check
     stopifnot(

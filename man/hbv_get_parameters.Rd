@@ -5,7 +5,7 @@
 \title{Download Global HBV Parameter Maps}
 \usage{
 hbv_get_parameters(
-  aoi,
+  AOI,
   folds = 1:10,
   mean = FALSE,
   warp = TRUE,
@@ -13,7 +13,7 @@ hbv_get_parameters(
 )
 }
 \arguments{
-\item{aoi}{SpatVector. A polygon layer with area of interest.}
+\item{AOI}{SpatVector. A polygon layer with area of interest.}
 
 \item{folds}{Numeric. A numeric vector from 1 to 10 indicating the
 folds numbers to process.}
@@ -22,7 +22,7 @@ folds numbers to process.}
 calculated using \code{\link[terra]{global}} method from \pkg{terra} package}
 
 \item{warp}{Logical. If TRUE, reproject the HBV rasters to
-\code{aoi} projection}
+\code{AOI} projection}
 
 \item{version}{Character. Can be used to determine the dataset version. Must be
 one of "v0.8" (original release from February 5, 2020) or "v0.9" (revised version

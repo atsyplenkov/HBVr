@@ -146,7 +146,7 @@ To download 1, 2 and 5 folds we need to specify it in the function. Here is the 
 ```{r, message=FALSE, warning=TRUE}
 zonal_stat <- 
   hbv_get_parameters(
-    aoi = v,
+    AOI = v,
     folds = c(1, 2, 5),
     mean = TRUE
   )
@@ -166,7 +166,7 @@ To download `SpatRaster` objects we need to run the following code chunk:
 
 rasters <- 
   hbv_get_parameters(
-    aoi = v,
+    AOI = v,
     folds = c(1, 2, 5),
     mean = FALSE
   )
